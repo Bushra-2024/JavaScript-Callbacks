@@ -5,6 +5,9 @@
 
 A callback function is a function passed into another function as an argument, It means the outer function uses the callback function to do something when it's needed or to finish its task.
 
+<img src="https://i0.wp.com/jscurious.com/wp-content/uploads/2020/12/callback_functions_javascript_jscurious.jpg?fit=1182%2C645&ssl=1">
+
+
 ```Example:``` Calling Your Friend
 You tell your friend to call you when they’re done with their homework.
 
