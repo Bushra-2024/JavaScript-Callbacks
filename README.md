@@ -3,6 +3,7 @@ A callback function is a function passed into another function as an argument, I
 
 ```Example:``` Calling Your Friend
 You tell your friend to call you when they’re done with their homework.
+
 Your friend is the outer function, and your phone number is the callback function.
 
 ```js
@@ -21,4 +22,9 @@ friend(doneHomework);
 
 ```What Happens:```
 The outer function (friend) is working on homework.
+
 Once it's done, it calls back the doneHomework function.
+
+## Array Callback
+
+**Array Method foreach**
