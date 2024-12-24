@@ -105,7 +105,7 @@ const evenNumbers = numbers.filter(function(number) {
 console.log(evenNumbers); // Output: [2, 4, 6]
 ```
 
-##  Array Method Filter 
+##  Array Method Find
 The `find()` method in JavaScript returns the first element that satisfies the condition, not an array. It accepts three parameters: the current element, its index, and the entire array. Once it finds an element that meets the condition, it breaks out of the loop and returns that element. If no element satisfies the condition, it returns undefined.
 
 Key points `find():`
@@ -145,4 +145,35 @@ const values = [1, 10, 21, 2];
 const sortedValues = values.toSorted((a, b) => a - b);
 console.log(sortedValues); // [1, 2, 10, 21]
 console.log(values); // [1, 10, 21, 2]
+```
+
+##  Array Method Reduce
+The `reduce()` method is used to reduce an array to a single value by applying a callback function to each element in the array, one by one. It accepts two parameters:
+
+1. Callback Function: This function is applied to each element of the array, and it accepts four parameters:
+      - Accumulator: This stores the accumulated result from the previous iterations.
+      - Current Value: The current element being processed.
+      - Current Index: The index of the current element being processed.
+      - Array: The entire array being processed.
+
+2. Initial Value (Optional): This is the initial value for the accumulator. If not provided, the first element of the array will be used as the initial value, and the iteration will start from the second element.
+
+Key Points `reduce()`:
+ - ***Accumulator:*** The result of the callback function after each iteration. It carries the result through all iterations.
+ - ***Current Value:***  The current element of the array being processed.
+ - ***Initial Value:***  The second parameter to reduce(), which sets the starting value for the accumulator. If not provided, the first element of the array is used, and the loop starts from the second element.
+ - ***Default Behavior:***  If no initial value is provided, the first element of the array becomes the accumulator, and the iteration starts with the second element.
+
+```js
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
 ```
