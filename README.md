@@ -104,3 +104,21 @@ const evenNumbers = numbers.filter(function(number) {
 });
 console.log(evenNumbers); // Output: [2, 4, 6]
 ```
+
+##  Array Method Filter 
+The `find()` method in JavaScript returns the first element that satisfies the condition, not an array. It accepts three parameters: the current element, its index, and the entire array. Once it finds an element that meets the condition, it breaks out of the loop and returns that element. If no element satisfies the condition, it returns undefined.
+
+Key points `find():`
+1. ***find() does not return a new array;*** it returns the first matching element (or undefined if no element matches).
+2. Once the condition is met for an element, it breaks and returns that element.
+
+
+```js
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// Expected output: 12
+```
+
