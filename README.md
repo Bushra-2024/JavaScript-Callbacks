@@ -33,6 +33,16 @@ The outer function (friend) is working on homework.
 
 Once it's done, it calls back the doneHomework function.
 
-## Array Callback
+# Array Callback
 
 **Array Method foreach**
+The `forEach()` method executes a provided function once for each element in an array. It’s useful for iterating over array elements without the need for managing indices manually.
+
+`Key points about forEach():`
+Does not return anything: It returns undefined, meaning it does not produce a result like other array methods (e.g., map()).
+
+
+Does not execute for empty elements: If the array has holes (empty slots), the function will not be called for them.
+
+
+Callback function: The method accepts a callback function as its parameter, which is called for each element in the array.
