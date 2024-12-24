@@ -122,3 +122,27 @@ console.log(found);
 // Expected output: 12
 ```
 
+
+##  Array Method toSorted
+The `toSorted()` method is used to sort elements of an array (such as numbers or strings) without mutating the original array. Instead, it returns a new sorted array. This is particularly useful when you want to maintain the original order of the array.
+
+Key Points `toSorted():`
+ - Does Not Mutate Original Array: Unlike sort(), which sorts the array in place, toSorted() returns a new sorted array.
+ - Works with Numbers and Strings: It can sort both strings and numbers. However, when sorting numbers, we typically use the formula a - b for numeric comparison to ensure the correct order.
+ - String Sorting: When sorting strings, it uses the default lexicographical order (alphabetical order). It’s not ideal for numeric strings (e.g., "12", "2") because they are sorted lexicographically by default.
+ - For Numbers: When dealing with numbers, we can specify a sorting function, like a - b, where:
+     - a - b is used to sort numbers in ascending order.
+     - If a - b is negative, it means a should come before b (swap).
+     - If a - b is positive, it means a should come after b.
+
+```js
+const months = ["Mar", "Jan", "Feb", "Dec"];
+const sortedMonths = months.toSorted();
+console.log(sortedMonths); // ['Dec', 'Feb', 'Jan', 'Mar']
+console.log(months); // ['Mar', 'Jan', 'Feb', 'Dec']
+
+const values = [1, 10, 21, 2];
+const sortedValues = values.toSorted((a, b) => a - b);
+console.log(sortedValues); // [1, 2, 10, 21]
+console.log(values); // [1, 10, 21, 2]
+```
