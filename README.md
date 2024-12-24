@@ -39,10 +39,53 @@ Once it's done, it calls back the doneHomework function.
 The `forEach()` method executes a provided function once for each element in an array. It’s useful for iterating over array elements without the need for managing indices manually.
 
 `Key points about forEach():`
-Does not return anything: It returns undefined, meaning it does not produce a result like other array methods (e.g., map()).
+***Does not return anything:*** It returns undefined, meaning it does not produce a result like other array methods (e.g., map()).
 
 
-Does not execute for empty elements: If the array has holes (empty slots), the function will not be called for them.
+***Does not execute for empty elements:*** If the array has holes (empty slots), the function will not be called for them.
 
 
-Callback function: The method accepts a callback function as its parameter, which is called for each element in the array.
+***Callback function:*** The method accepts a callback function as its parameter, which is called for each element in the array.
+
+```js
+const numbers = [1, 2, 3, 4];
+numbers.forEach(function(number, index) {
+    console.log('Index:', index, 'Value:', number);
+});
+```
+
+**Array Method Map**
+The ~map()` method creates a new array populated with the results of calling a provided function on every element in the calling array. It does not change the original array.
+
+`Key points about map():`
+***Returns a new array:*** It returns a new array with the results of applying the callback function to each element.
+
+
+***Does not modify the original array:*** The original array remains unchanged.
+
+
+***Does not change the length of the array:*** The new array will have the same length as the original array, even if the callback function returns undefined or some value for every element.
+
+
+***Accepts a callback function:*** The callback function is called for each element, and the element is transformed based on the logic in the function.
+
+`Syntax:`
+```js
+let newArray = array.map(function(currentValue, index, array) {
+    // Code to return a new value for each element
+});
+```
+
+```js
+currentValue: The current element being processed in the array.
+index (optional): The index of the current element.
+array (optional): The array that map() was called upon.
+```
+
+```js
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.map(function(number) {
+    return number * 2;
+});
+console.log(doubled); // Output: [2, 4, 6, 8]
+```
