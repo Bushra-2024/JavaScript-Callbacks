@@ -55,19 +55,13 @@ numbers.forEach(function(number, index) {
 ```
 
 **Array Method Map**
-The ~map()` method creates a new array populated with the results of calling a provided function on every element in the calling array. It does not change the original array.
+The `~map()` method creates a new array populated with the results of calling a provided function on every element in the calling array. It does not change the original array.
 
 `Key points about map():`
-***Returns a new array:*** It returns a new array with the results of applying the callback function to each element.
-
-
-***Does not modify the original array:*** The original array remains unchanged.
-
-
-***Does not change the length of the array:*** The new array will have the same length as the original array, even if the callback function returns undefined or some value for every element.
-
-
-***Accepts a callback function:*** The callback function is called for each element, and the element is transformed based on the logic in the function.
+1. ***Returns a new array:*** It returns a new array with the results of applying the callback function to each element.
+2. ***Does not modify the original array:*** The original array remains unchanged.
+3. ***Does not change the length of the array:*** The new array will have the same length as the original array, even if the callback function returns undefined or some value for every element.
+4. ***Accepts a callback function:*** The callback function is called for each element, and the element is transformed based on the logic in the function.
 
 `Syntax:`
 ```js
@@ -88,4 +82,25 @@ const doubled = numbers.map(function(number) {
     return number * 2;
 });
 console.log(doubled); // Output: [2, 4, 6, 8]
+```
+
+
+**Array Method Filter**
+The `filter()` method creates a new array with all elements that pass the test implemented by the provided function. It is useful when you want to exclude certain elements based on a condition.
+
+
+Key points about `filter():`
+
+1.  ***Returns a new array:*** Like map(), filter() returns a new array.
+2.  ***Does not modify the original array:*** The original array remains unchanged.
+3.  ***Can result in a smaller array:*** Unlike map(), which creates an array of the same size, filter() can result in a smaller array, depending on how many elements pass the condition.
+4.  ***Accepts a callback function:*** The callback function is called for each element, and it returns true or false to decide whether the element should be included in the new array.
+
+
+```js
+const numbers = [1, 2, 3, 4, 5, 6];
+const evenNumbers = numbers.filter(function(number) {
+    return number % 2 === 0; // Only even numbers
+});
+console.log(evenNumbers); // Output: [2, 4, 6]
 ```
