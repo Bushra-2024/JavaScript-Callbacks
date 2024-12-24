@@ -1,4 +1,8 @@
 # JavaScript-Callbacks
+
+![Uploading image.png…]()
+
+
 A callback function is a function passed into another function as an argument, It means the outer function uses the callback function to do something when it's needed or to finish its task.
 
 ```Example:``` Calling Your Friend
