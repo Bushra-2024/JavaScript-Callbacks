@@ -35,7 +35,7 @@ Once it's done, it calls back the doneHomework function.
 
 # Array Callback
 
-**Array Method foreach**
+## Array Method foreach
 The `forEach()` method executes a provided function once for each element in an array. It’s useful for iterating over array elements without the need for managing indices manually.
 
 `Key points about forEach():`
@@ -54,7 +54,7 @@ numbers.forEach(function(number, index) {
 });
 ```
 
-**Array Method Map**
+## Array Method Map
 The `~map()` method creates a new array populated with the results of calling a provided function on every element in the calling array. It does not change the original array.
 
 `Key points about map():`
@@ -85,7 +85,7 @@ console.log(doubled); // Output: [2, 4, 6, 8]
 ```
 
 
-**Array Method Filter**
+## Array Method Filter
 The `filter()` method creates a new array with all elements that pass the test implemented by the provided function. It is useful when you want to exclude certain elements based on a condition.
 
 
