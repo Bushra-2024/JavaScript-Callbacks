@@ -15,23 +15,19 @@ You tell your friend to call you when they’re done with their homework.
 Your friend is the outer function, and your phone number is the callback function.
 
 ```js
-function doneHomework() {
-  console.log("I finished my homework!");
+function greetings(name, callback) {
+  console.log("Hello " + name);  // Prints "Hello alex"
+  callback();  // Calls the callback function
 }
 
-function friend(callback) {
-  console.log("I'm doing my homework...");
-  callback(); // Call the callback function when homework is done
+function callback() {
+  console.log("Done!");  // Prints "Done!"
 }
 
-// Pass the 'doneHomework' function as the callback
-friend(doneHomework);
+greetings("Alex", callback);  // Calls greetings with "Alex" and callback
+
 ```
 
-```What Happens:```
-The outer function (friend) is working on homework.
-
-Once it's done, it calls back the doneHomework function.
 
 # Array Callback
 
